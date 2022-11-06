@@ -1,0 +1,632 @@
+{
+	"info": {
+		"_postman_id": "0a7b0da2-171e-4e3d-986b-7f2a0510b421",
+		"name": "AppVersion",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "取得所有AppId相關訊息",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJBRE1JTiIsImV4cCI6MTY2NzIwMjM5NCwidXNlcklkIjoyLCJsZXZlbCI6OX0.Vjm4Q0Cjcu5tyQq0SrFUFMWKQswee6xJdL1AnpCez0y2I7cuGRYm8V_wQKwgOd9rI2x5rYIXreNWQxULsPC08g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"limit\": 10,\n    \"offset\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:12345/versionList/1",
+					"host": [
+						"localhost"
+					],
+					"port": "12345",
+					"path": [
+						"versionList",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "取得該AppId相關訊息",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJBRE1JTiIsImV4cCI6MTY2NTcyMTMyOSwidXNlcklkIjoyLCJsZXZlbCI6OX0.qRwM_EdzDILKfwWuwzsOQiOCmzPk2b0gs5RIDKNTTJEmkAWWES_ufc5vsf7WjWPfDCV2UV6dxzS-MFB9dPBGDA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:12345/appVersion/id443904275",
+					"host": [
+						"localhost"
+					],
+					"port": "12345",
+					"path": [
+						"appVersion",
+						"id443904275"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "取得所有AppId相關訊息 (簡單版)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:12345/appVersion/mobile/id304878510",
+					"host": [
+						"localhost"
+					],
+					"port": "12345",
+					"path": [
+						"appVersion",
+						"mobile",
+						"id304878510"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "新增AppId與名稱",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"type\": 1,\n    \"id\": \"com.ubercab.driver\",\n    \"name\": \"Uber Driver\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:12345/appVersion",
+					"host": [
+						"localhost"
+					],
+					"port": "12345",
+					"path": [
+						"appVersion"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "取得在該Store的APP版本號",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJXSUxMSUFNIiwiZXhwIjoxNjY0ODUxMTc4LCJ1c2VySWQiOjF9.h-dYJQD8ZKgMpYntr1Ksi_ULopIDnX26kSD5NG5A5xcLh177fwMrszpusZgGfu8vaRbvpg0NQMXbkdXm3UoYdA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:12345/appVersion/id443904275/0",
+					"host": [
+						"localhost"
+					],
+					"port": "12345",
+					"path": [
+						"appVersion",
+						"id443904275",
+						"0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "更新單一Update的型式",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJBRE1JTiIsImV4cCI6MTY2NjA3MjU2MywidXNlcklkIjoxLCJsZXZlbCI6OX0.Iq3BNczrv5kMNrjYU9o2dHnXpDkFOeDrCzGCY4FLy7yonG6-dwU9XjG767iVRsV_OQFYHIf0FxDmlIFITP-vQw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"type\": \"DEV\",\n    \"level\": 2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:12345/updateType/id304878510",
+					"host": [
+						"localhost"
+					],
+					"port": "12345",
+					"path": [
+						"updateType",
+						"id304878510"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "更新相關資訊",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"auto\": true,\n    \"name\": \"優食 - Android\",\n    \"icon\": \"https://play-lh.googleusercontent.com/85aCzCdhDj9jsj-TgX_TV_9ArMSfTtjp4Fb89ClM5FllrFHCjj1clR5b8-T5jm_-rGe8=w480-h960\",\n    \"version\": {\n        \"store\": \"1.2.3\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:12345/appVersion/com.ubercab.driver/1",
+					"host": [
+						"localhost"
+					],
+					"port": "12345",
+					"path": [
+						"appVersion",
+						"com.ubercab.driver",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "刪除該APP資訊",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:12345/appVersion/com.ubercab.driver",
+					"host": [
+						"localhost"
+					],
+					"port": "12345",
+					"path": [
+						"appVersion",
+						"com.ubercab.driver"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "儲存成excel",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:12345/saveAppVersion",
+					"host": [
+						"localhost"
+					],
+					"port": "12345",
+					"path": [
+						"saveAppVersion"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "上傳Excel",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/Users/ios/Downloads/AppId_1664166908.xlsx"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:12345/uploadExcel",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "12345",
+					"path": [
+						"uploadExcel"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "新增使用者",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJBRE1JTiIsImV4cCI6MTY2NTY0NTMzNywidXNlcklkIjoyLCJsZXZlbCI6OX0.DCOhElCPAxEHPEOIzn_IU-2MSp_vOahjoUzuLWYfZlpMfFZIX-sp_5eXG1ychrtB2yaed9PrKRI8AeEqMtigBg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"lucy\",\n    \"password\": \"123456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:12345/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "12345",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "搜尋使用者",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJXSUxMSUFNIiwiZXhwIjoxNjY0ODUxMTc4LCJ1c2VySWQiOjF9.h-dYJQD8ZKgMpYntr1Ksi_ULopIDnX26kSD5NG5A5xcLh177fwMrszpusZgGfu8vaRbvpg0NQMXbkdXm3UoYdA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:12345/user/lucy",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "12345",
+					"path": [
+						"user",
+						"lucy"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "使用者登入",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJBRE1JTiIsImV4cCI6MTY2NzM2MDAzMywidXNlcklkIjoxLCJsZXZlbCI6OX0.tFJu4go2jpse0sXlq_VxiGolpwwFB4-uiSmXlXB-OrL8MQAppidfSfY8ldzRc4B4enBJUUZE3iyvs-vrRULTSg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"root\",\n    \"password\": \"3939889\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:12345/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "12345",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "測試Token合法性",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"token\": \"Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJBRE1JTiIsImV4cCI6MTY2NTYzNTE0MywidXNlcklkIjoyLCJsZXZlbCI6OX0.ZO1r02dNdewNLMeP8VO39uje0T0un3cXdoAF3MgI3wthnU-H6g4zfr5pTyPaOpvYHrGJKXeGZmxxK4X4KLb3KQ\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:12345/checkToken",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "12345",
+					"path": [
+						"checkToken"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Token列表",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJST09UIiwiZXhwIjoxNjY3MzYwMDgwLCJ1c2VySWQiOjMsImxldmVsIjo5OX0.bbM28xilEWXuAebH_jI_h9ykSFzdViKUOCS-_pY9Jr8iyvasWj3kzSBLuwws9LqPRhGMI9hg0IucFVPH7Kf1qA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"where\": \"id > 0\",\n    \"limit\": 10,\n    \"offset\": 0\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:12345/authToken",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "12345",
+					"path": [
+						"authToken"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "強制更新資料",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJBRE1JTiIsImV4cCI6MTY2NTYzNTE0MywidXNlcklkIjoyLCJsZXZlbCI6OX0.ZO1r02dNdewNLMeP8VO39uje0T0un3cXdoAF3MgI3wthnU-H6g4zfr5pTyPaOpvYHrGJKXeGZmxxK4X4KLb3KQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:12345/forceUpdate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "12345",
+					"path": [
+						"forceUpdate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "註冊Token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"token\": \"fdsfdlsfdljfdlskjflsdjfsl\",\n    \"system\": \"ANDROID\",\n    \"name\": \"William\",\n    \"version\": \"15.7\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:12345/pushToken/id12345678",
+					"host": [
+						"localhost"
+					],
+					"port": "12345",
+					"path": [
+						"pushToken",
+						"id12345678"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "推播相關資訊設定",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJBRE1JTiIsImV4cCI6MTY2NzIwMjM5NCwidXNlcklkIjoyLCJsZXZlbCI6OX0.Vjm4Q0Cjcu5tyQq0SrFUFMWKQswee6xJdL1AnpCez0y2I7cuGRYm8V_wQKwgOd9rI2x5rYIXreNWQxULsPC08g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"store\": {},\n    \"prod\": {},\n    \"dev\": {}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:12345/pushSettings/id443904275",
+					"host": [
+						"localhost"
+					],
+					"port": "12345",
+					"path": [
+						"pushSettings",
+						"id443904275"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "推播測試",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJBRE1JTiIsImV4cCI6MTY2NzI4NDg2OCwidXNlcklkIjoyLCJsZXZlbCI6OX0.fm-87EmtCeztQxiPBh7KvtCmFksq0moH91pPjpkFnewWaMrKqZJKXUXshHcB0OKLRvisbGb3cjp9bYj8RBGbIg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"pushType\": 1,\n    \"title\":\"TTILE\",\n    \"message\": \"MESSAGE\",\n    \"image\": \"IMAGE\",\n    \"store\": {},\n    \"prod\": {},\n    \"dev\": {}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:12345/push/id443904275",
+					"host": [
+						"localhost"
+					],
+					"port": "12345",
+					"path": [
+						"push",
+						"id443904275"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "推播Token列表",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJST09UIiwiZXhwIjoxNjY3MzYzNzgwLCJ1c2VySWQiOjMsImxldmVsIjo5OX0.oJ3tjFBb7hzj9yGuEs3aT4ZbEIIqeJUdAgK9SZHE2KQ99BRMGhdv4t1wx1rr7AXHa0H_mYp3Iy5ZVchh15RFEw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:12345/pushToken",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "12345",
+					"path": [
+						"pushToken"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
